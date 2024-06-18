@@ -1,0 +1,102 @@
+@use '../mixins/hover.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+@use '../mixins/responsive.scss' as *;
+
+/*
+MOVIMIENTO Y ESCALAS -> translate, rotate y scale SIEMPRE
+MOSTRAR / OCULTAR -> Opacity SIEMPRE
+
+LA PROPIEDAD CORRESPONDIENTE 
+
+*/
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    grid-template-rows: repeat(2,200px);
+    gap: 1rem;
+    
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    color: #333;
+    font-size: 3rem;
+}
+
+.box-1{
+    grid-column: 2 / 4;
+}
+
+.box-2{
+    grid-row: 1 / 3;
+}
+
+.box-3{
+    
+}
+
+
+
+/*
+.box-container{
+width: 200px;
+height: 200px;
+background-color: purple;
+@include hover {
+    .box{
+        translate: -100px;
+    }
+}
+}
+
+.box {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    translate: 0;
+    transition: translate .3s;
+
+}
+*/
+
+/*ORDEN DE PROPIEDADES
+position/ top / left...
+display
+box-model
+colores
+el resto
+*/
+
+
+/*
+    @include responsive (678px){
+        width: 500px;
+    }
+    @include responsive (tablet){
+        background-color: steelblue;
+    }
+    @include responsive (desktop){
+        background-color: limegreen;
+    }
+    @include responsive (laptop){
+        background-color: purple;
+    }*/
+
+/*
+    @include hover{
+        background-color: steelblue;
+    }
+
+    &::after{
+        @include pseudo{
+            top: 200px;
+            left: 200px;
+            background-color: red;
+        }
+    }*/
+
